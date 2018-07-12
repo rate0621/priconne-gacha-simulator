@@ -1,6 +1,10 @@
 import Gacha
 import random
-import sys
+import sys, os
+
+here = os.path.join( os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(here)
+import ImageGenerator
 
 class GachaSimulation(Gacha.Gacha):
   def __init__(self):
@@ -74,5 +78,8 @@ if __name__ == '__main__':
 #    print (completed_count)
 
   get_chara_list = gs.roll10()
-  print (get_chara_list)
+#  print (get_chara_list)
+
+  ig = ImageGenerator.ImageGenerator()
+  ig.gacha_result_generator(get_chara_list)
 

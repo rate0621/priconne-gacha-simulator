@@ -30,10 +30,11 @@ class ImageGenerator:
     作成した画像へのパスを返す
     '''
 
-    # ガチャ結果画面の背景となる画像
-    base_image = Image.open('data/gacha_result_base.jpg')
-
     here = os.path.join( os.path.dirname(os.path.abspath(__file__)))
+
+    # ガチャ結果画面の背景となる画像
+    base_image = Image.open(here + '/data/gacha_result_base.jpg')
+
 
     for i, charactor in enumerate(charactor_list):
       memory_piece_filename = CHARAS.CHARACTOR_PNG[charactor]

@@ -1,10 +1,10 @@
-import Gacha
 import random
 import sys, os
 
 here = os.path.join( os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(here)
 import ImageGenerator
+import Gacha
 
 class GachaSimulation(Gacha.Gacha):
   def __init__(self):

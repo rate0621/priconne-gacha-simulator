@@ -106,4 +106,8 @@ class Gacha():
     character_list = self.get_list(self.get_rank_special())
     return random.choice(character_list)
 
+  def roll_god_gacha(self):
+    character_list = self.get_list(3)
+    return random.choice(character_list)
+
 

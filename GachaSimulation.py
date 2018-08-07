@@ -69,6 +69,14 @@ class GachaSimulation(Gacha.Gacha):
 
     return get_chara_list
 
+  def god_roll10(self):
+    get_chara_list = []
+
+    for var in range(0, 10):
+      get_chara_list.append(self.roll_god_gacha())
+
+
+    return get_chara_list
 
 if __name__ == '__main__':
   gs = GachaSimulation()

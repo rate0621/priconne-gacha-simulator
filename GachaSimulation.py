@@ -12,6 +12,8 @@ class GachaSimulation(Gacha_kai.Gacha):
     super().__init__()
 
 
+  # 以下の３メソッドはGacha(_kai).pyに全く同じ形式で書いても問題ない。
+  # どっちに書くか悩ましいが、いつかあるべき姿がわかったらその時に治す。
   def roll_normal_gacha(self):
     character_list = self.get_list(self.get_rank_normal())
     chara_name, chara_img_name = random.choice(list(character_list.items()))

@@ -36,9 +36,10 @@ class ImageGenerator:
     base_image = Image.open(here + '/data/gacha_result_base.jpg')
 
 
+    # charactorという変数には、(キャラ名、画像ファイル名)という形でタブル？が入ってくる
+    # そのため、charactor[1]と書けば、画像ファイル名が取得できる
     for i, charactor in enumerate(charactor_list):
-      memory_piece_filename = CHARAS.CHARACTOR_PNG[charactor]
-      memory_piece_image_path = here + '/data/charactors/memory_piece/' + memory_piece_filename
+      memory_piece_image_path = here + '/data/charactors/memory_piece/' + charactor[1]
       memory_piece_image = Image.open(memory_piece_image_path)
 
       x, y = self.paste_position[i]

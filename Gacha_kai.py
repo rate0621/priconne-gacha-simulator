@@ -40,6 +40,7 @@ class Gacha():
         "ミミ"  : 'mimi_crop.PNG',
         "エリコ": 'eriko_crop.PNG',
         "シノブ": 'shinobu_crop.PNG',
+        "ナナカ": 'yajuu.jpeg',
         "マヒル": 'mahiru_crop.PNG',
         "シオリ": 'shiori_crop.PNG',
         "チカ"  : 'tika_crop.PNG',

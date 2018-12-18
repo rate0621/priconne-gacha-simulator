@@ -29,6 +29,7 @@ class Gacha():
         "トモ"          : 'yajuu.jpeg',
         "クリスティーナ": 'yajuu.jpeg',
         "ルカ"          : 'yajuu.jpeg',
+        "ネネカ"        : 'yajuu.jpeg',
       },
       2: {
         "アカリ": 'akari_crop.PNG',

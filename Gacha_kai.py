@@ -32,6 +32,7 @@ class Gacha():
         "ネネカ"        : 'yajuu.jpeg',
         "クリスマスアヤネ" : 'yajuu.jpeg',
         "新年ヒヨリ" : 'yajuu.jpeg',
+        "カスミ"     : 'yajuu.jpeg',
       },
       2: {
         "アカリ": 'akari_crop.PNG',

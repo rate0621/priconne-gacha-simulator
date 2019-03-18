@@ -59,9 +59,9 @@ class Gacha():
       1: {
 #        "ミフユ_夏"  : 'mihuyu_summer_crop.PNG',
 #        "コッコロ_夏": 'coccoro_summer_crop.PNG',
-        "ペコリーヌ" : 'pecorine_crop.PNG',
-        "コッコロ"   : 'coccoro_crop.PNG',
-        "キャル"     : 'kyaru_crop.PNG',
+#        "ペコリーヌ" : 'pecorine_crop.PNG',
+#        "コッコロ"   : 'coccoro_crop.PNG',
+#        "キャル"     : 'kyaru_crop.PNG',
         "ユイ"       : 'yui_crop.PNG',
         "ヒヨリ"     : 'hiyori_crop.PNG',
         "レイ"       : 'rei_crop.PNG',
@@ -73,6 +73,7 @@ class Gacha():
         "アオイ"     : 'aoi_crop.PNG',
         "ミサキ"     : 'misaki_crop.PNG',
         "リマ"       : 'rima_crop.PNG',
+        "アユミ"     : 'yajuu.jpeg',
       }
     }
 

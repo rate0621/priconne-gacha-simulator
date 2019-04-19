@@ -1,4 +1,5 @@
 import random
+import numpy as np
 import sys, os
 
 here = os.path.join( os.path.dirname(os.path.abspath(__file__)))
@@ -99,11 +100,20 @@ class GachaSimulation(Gacha_kai.Gacha):
 
 
   def challenge(self, target_chara_name):
-    is_find = self.characterNameCheck(target_chara_name)
+    is_find   = self.characterNameCheck(target_chara_name)
 
     if is_find:
-      challenge_count = self.letsChallenge(target_chara_name)
-      message = 'あなたが' + target_chara_name + 'を引くまでにかかった金額は、' + str(challenge_count * 3000) + '円で、' + str(challenge_count * 10) + '連しました。お疲れ様でした！'
+      is_pickup, probability = self.characterPickupCheck(target_chara_name)
+
+      if is_pickup:
+        challenge_count = self.letsPickupChallenge(probability)
+      else:
+        # ピックアップじゃないほうは１０連ずつ回すため、かけ１０する
+        challenge_count = self.letsChallenge(target_chara_name) * 10
+  
+      money = challenge_count * 300
+      message = 'あなたが' + target_chara_name + 'を引くまでにかかった金額は、' + str(money) + '円で、' + str(challenge_count) + '連しました。お疲れ様でした！'
+
 
     else:
       challenge_count = 0
@@ -119,6 +129,12 @@ class GachaSimulation(Gacha_kai.Gacha):
 
     return False
     
+  def characterPickupCheck(self, target_chara_name):
+    name, probability = self.gacha_pickup_character
+    if target_chara_name == name:
+      return True, probability
+    else:
+      return False, None
 
 
   def letsChallenge(self, target_chara_name):
@@ -136,14 +152,26 @@ class GachaSimulation(Gacha_kai.Gacha):
 
       gacha_count += 1
 
+  def letsPickupChallenge(self, probability):
+    other = 1 - probability
+    gacha_count = 1
+    while(1):
+      res = np.random.choice([False, True], p=[other, probability])
+      if res:
+        return gacha_count
+      else:
+        gacha_count += 1
+        
+
 
 if __name__ == '__main__':
   gs = GachaSimulation()
 
 #  print (gs.roll_normal_gacha())
-#  challenge_count, message = gs.challenge('クリスティーナ')
+  challenge_count, message = gs.challenge('グレア')
+  print (message)
   
-  print (gs.god_roll10())
+#  print (gs.god_roll10())
 
 #  for i in range(0, 100000):
 #    completed_count = gs.roll_gacha_until_complete()

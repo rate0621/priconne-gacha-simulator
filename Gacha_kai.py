@@ -1,4 +1,5 @@
 import random
+import numpy as np
 
 class Gacha():
   def __init__(self):
@@ -78,6 +79,8 @@ class Gacha():
       }
     }
 
+    self.gacha_pickup_character = ("グレア", 0.007)
+
   def get_list(self, rank):
 
     if rank in (1, 2, 3):
@@ -91,23 +94,27 @@ class Gacha():
 
   def get_rank_normal(self):
     #1~9回目のノーマルガチャ
-    num = random.randint(1,100)
+#    num = random.randint(1,100)
+#
+#    if num <= 80:
+#      return 1
+#    elif num >= 81 and num <= 98:
+#      return 2
+#    else:
+#      return 3
 
-    if num <= 80:
-      return 1
-    elif num >= 81 and num <= 98:
-      return 2
-    else:
-      return 3
+    return np.random.choice([1, 2, 3], p=[0.795, 0.18, 0.025])
 
   def get_rank_special(self):
     #10回目のガチャ
-    num = random.randint(1,100)
+#    num = random.randint(1,100)
+#
+#    if num <= 98:
+#      return 2
+#    else:
+#      return 3
 
-    if num <= 98:
-      return 2
-    else:
-      return 3
+    return np.random.choice([2, 3], p=[0.975, 0.025])
 
   def roll_normal_gacha(self):
     character_list = self.get_list(self.get_rank_normal())
@@ -116,6 +123,7 @@ class Gacha():
   def roll_special_gacha(self):
     character_list = self.get_list(self.get_rank_special())
     return random.choice(character_list)
+
 
 
 if __name__ == '__main__':

@@ -14,6 +14,8 @@ pip install -r requirements.txt
 
 これで使えるようになるはず。  
 
+※ mecabのインストールでコケる可能性がある。その場合はmecabの行を消して再度 `pip install -r requirements.txt` を実行で良い（使っていないため）
+
 ## 使い方
 
 * GachaSimulation.py

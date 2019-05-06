@@ -167,9 +167,12 @@ class GachaSimulation(Gacha_kai.Gacha):
 if __name__ == '__main__':
   gs = GachaSimulation()
 
+  get_chara_list = gs.roll10()
+  print (get_chara_list)
+
 #  print (gs.roll_normal_gacha())
-  challenge_count, message = gs.challenge('グレア')
-  print (message)
+#  challenge_count, message = gs.challenge('グレア')
+#  print (message)
   
 #  print (gs.god_roll10())
 
@@ -177,7 +180,6 @@ if __name__ == '__main__':
 #    completed_count = gs.roll_gacha_until_complete()
 #    print (completed_count)
 
-#  get_chara_list = gs.roll10()
 #  ig = ImageGenerator.ImageGenerator()
 #  print (ig.gacha_result_generator(get_chara_list))
 

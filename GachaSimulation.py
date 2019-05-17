@@ -177,7 +177,6 @@ if __name__ == '__main__':
 #    completed_count = gs.roll_gacha_until_complete()
 #    print (completed_count)
 
-#  get_chara_list = gs.roll10()
 #  ig = ImageGenerator.ImageGenerator()
 #  print (ig.gacha_result_generator(get_chara_list))
 

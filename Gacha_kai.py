@@ -38,6 +38,7 @@ class Gacha():
         "オノン"     : 'yajuu.jpeg',
         "レム"       : 'yajuu.jpeg',
         "エミリア"   : 'yajuu.jpeg',
+        "サレンサマー"   : 'yajuu.jpeg',
       },
       2: {
         "アカリ": 'akari_crop.PNG',
@@ -82,7 +83,7 @@ class Gacha():
       }
     }
 
-    self.gacha_pickup_character = ("エミリア", 0.007)
+    self.gacha_pickup_character = ("サレンサマー", 0.007)
 
   def get_list(self, rank):
 
